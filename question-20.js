@@ -12,7 +12,6 @@ var num = 0
 
 for (var i = 0; i < products.length; i++) {
     num += 1
-    // console.log(num);
     
     prodName = products[i]
     prodPrice = prices[i]

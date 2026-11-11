@@ -7,15 +7,42 @@ var userproductnum = +prompt("Enter Product Number")
 var quantity = +prompt("Enter Product Quantity")
 
 var prodName = ""
-var prodPrice = 0
-var num = 0
+var prodPrice = 0 
+var num = userproductnum - 1
+var subTotal = prices[num] * quantity 
+var discount = 0
 
 for (var i = 0; i < products.length; i++) {
-    num += 1
     
     prodName = products[i]
     prodPrice = prices[i]
-
-    console.log(prodName , prodPrice , num);
     
+    console.log(`Product : ${prodName}  (Price ${prodPrice})`);
+    
+}
+
+if (userproductnum <= 0 || userproductnum > 5
+    || quantity <= 0 
+) {
+    
+    alert("Invalid Number")
+    
+} else{
+    console.log("Your Choice :");
+    console.log(`Product: ${products[num]}`);
+    console.log(`Unit Price: Rs. ${prices[num]}`);
+    console.log(`Quantity: ${quantity}`);
+    
+    console.log(`Subtotal: Rs. ${subTotal}`);
+    
+    if (subTotal >= 5000) {
+        discount = 10
+        var discountAmount = subTotal * discount / 100
+        console.log(`Discount: Rs. ${discountAmount}`);
+    }
+    var finalBill = subTotal - discountAmount
+    
+    console.log(`Final Bill: Rs. ${finalBill}`);
+    
+
 }

@@ -37,6 +37,8 @@ if (userproductnum <= 0 || userproductnum > 5
         var discountAmount = subTotal * discount / 100
         console.log(`Discount: Rs. ${discountAmount}`);
     }
+    
+    discountAmount = 0
     var finalBill = subTotal - discountAmount
     
     console.log(`Final Bill: Rs. ${finalBill}`);

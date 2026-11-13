@@ -6,16 +6,13 @@ var prices = [2500, 1200, 22000, 800, 3500]
 var userproductnum = +prompt("Enter Product Number")
 var quantity = +prompt("Enter Product Quantity")
 
-var prodName = ""
-var prodPrice = 0 
 var num = userproductnum - 1
 var subTotal = prices[num] * quantity 
-var discount = 0
 
 for (var i = 0; i < products.length; i++) {
     
-    prodName = products[i]
-    prodPrice = prices[i]
+    var prodName = products[i]
+    var prodPrice = prices[i]
     
     console.log(`Product : ${prodName}  (Price ${prodPrice})`);
     
@@ -36,7 +33,7 @@ if (userproductnum <= 0 || userproductnum > 5
     console.log(`Subtotal: Rs. ${subTotal}`);
     
     if (subTotal >= 5000) {
-        discount = 10
+        var discount = 10
         var discountAmount = subTotal * discount / 100
         console.log(`Discount: Rs. ${discountAmount}`);
     }

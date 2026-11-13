@@ -4,11 +4,7 @@
 var students = ["Ali", "Sara", "Ahmed", "Ayesha", "Hamza"];
 var marks = [78, 92, 45, 88, 33];
 
-var studentName = ""
-var studentmarks = 0
-
 var numPass = 0
-var numFail = 0
 var largest = marks[0]
 var indxnum = 0
 var average = 0
@@ -22,8 +18,9 @@ for (var i = 0; i < students.length; i++) {
 
     }
 
-    studentName = students[i]
-    studentmarks = marks[i]
+    var studentName = students[i]
+    var studentmarks = marks[i]
+
     console.log(`${studentName} - ${studentmarks} - ${isPass}`);
 
     if (marks[i] > largest) {
@@ -38,14 +35,14 @@ for (var i = 0; i < students.length; i++) {
     average += marks[i]
 }
 
-numFail = marks.length - numPass
+var numFail = marks.length - numPass
 var totalStudents = students.length
 
 
 console.log(`Total Students: ${totalStudents}`);
 console.log(`Passed: ${numPass}`);
 console.log(`Failed: ${numFail}`);
-console.log(`Top Student: (${students[indxnum]}) ${largest}`);
+console.log(`Top Student: ${students[indxnum]} (${largest})`);
 console.log(`Class Average: ${average / marks.length}`);
 
 
